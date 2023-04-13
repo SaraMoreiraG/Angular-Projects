@@ -1,0 +1,83 @@
+
+<div class="container">
+	<div class="row">
+		<!-- Switch -->
+		<div class="col-md-4 justify-content-center mt-3 align-items-center">
+			<div class="col-md-12 text-center">
+				<label class="switch">
+					<input type="checkbox" value=false (click)="showStatus()">
+					<span class="slider round"></span>
+				</label>
+			</div>
+			<!-- Off/On Text -->
+			<div [class]=offTextClass>
+				<p *ngIf="offText;else other_content">Off</p>
+				<ng-template #other_content><p>On</p></ng-template>
+			</div>
+		</div>
+		<!-- Favourite -->
+		<div class="col-md-4 justify-content-center mt-3 align-items-center">
+			<div class="col-md-12 text-center" (click)="setFav()">
+				<h1 *ngIf="isFav;else start_empty">
+					<i class="fa-solid fa-star"></i>
+				</h1>
+				<ng-template #start_empty><h1><i class="fa-regular fa-star"></i></h1></ng-template>
+			</div>
+		</div>
+		<!-- Notification -->
+		<div class="col-md-4 justify-content-center mt-3 align-items-center">
+			<div class="col-md-12 text-center bg_danger" (click)="setNotification()">
+				<h1 *ngIf="isNotif;else bell_empty">
+					<!-- <i class="fa-solid fa-bell"></i> -->
+					<div class="btn position-relative p-1">
+						<h1><i class="fa-solid fa-bell"></i></h1>
+						<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+							{{notifications}}
+						</span>
+					</div>
+				</h1>
+				<ng-template #bell_empty>
+					<h1><i class="fa-regular fa-bell"></i></h1>
+				</ng-template>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<!-- Load data -->
+		<div class="col-md-6 text-center">
+			<button class="btn btn-dark" (click)="showData()">Load data</button>
+			<div>{{ myData }}</div>
+		</div>
+		<!-- Show list -->
+		<div class="col-md-6 text-center">
+			<button class="btn btn-dark" (click) = "showList()"> {{ text }}</button>
+			<ul *ngIf = "visible">
+				<li
+					*ngFor = "let item of myList; let i = index"
+					[class.odd]="i % 2 === 0">
+						{{ item }}
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- Write text -->
+	<div class="row">
+		<div class="col-md-12 text-center mt-4">
+			<textarea
+				type="text" class="form-control" placeholder="Write some text..." rows="3"
+				[(ngModel)]="userText"
+				(keyup)="decreaseCharsLeft()"></textarea>
+
+		</div>
+		<div class="col-md-12 text-end">
+			<small>{{ charsLeft }} chars</small>
+		</div>
+		<div class="col-md-12 ps-4">
+			<p class="message">{{ userText }}</p>
+		</div>
+	</div>
+</div>

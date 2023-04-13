@@ -1,0 +1,29 @@
+.trafficTop {
+	height: 50px;
+	width: 15px;
+}
+.box {
+	height: 280px;
+	width: 150px;
+}
+.light {
+	height: 75px;
+	width: 75px;
+	margin: 0 auto 15px auto;
+	border-radius: 75px;
+}
+.dark {
+	background: #999999;
+}
+.red {
+	background-color: #dc3545;
+}
+.orange {
+	background: #ffc107;
+}
+.green {
+	background: #198754;
+}
+.selected {
+	box-shadow: 0 0 50px yellow;
+}

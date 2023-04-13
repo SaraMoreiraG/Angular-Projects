@@ -1,0 +1,57 @@
+.main{
+	border: 1px solid #f7f5f5;
+	margin: 0;
+	padding: 15px 10px 15px 10px;
+	scroll-snap-align: end;
+	font-weight: 200;
+	font-size: 1.5rem;
+	display: flex;
+	background-color: #f9f9f9
+}
+input{
+	border: 1px solid #7F7F7F;
+	padding: 15px 10px 15px 10px;
+	scroll-snap-align: end;
+	font-weight: 200;
+	font-size: 1.5rem;
+	display: flex;
+	background-color: #f9f9f9;
+	width: 170px;
+	outline: none;
+	color: #bfbfbf;
+}
+input:focus{
+	/* background: red; */
+	border: 1px solid #7F7F7F;
+}
+
+/****** Icons ******/
+.iconselected{
+	background: #7F7F7F;
+	border-radius: 25%;
+	color: white;
+}
+.erase,
+.edit,
+.zoom{
+	color: #bfbfbf;
+	display: none;
+}
+div:hover .erase,
+div:hover .edit,
+div:hover .zoom {
+	display: inline;
+}
+.erase:hover{
+	color: rgb(209, 21, 21);
+	cursor: pointer;
+}
+.edit:hover,
+.zoom:hover{
+	color: #7f7f7f;
+	cursor: pointer;
+}
+.check:hover{
+	color: rgb(58, 121, 25);
+	cursor: pointer;
+}

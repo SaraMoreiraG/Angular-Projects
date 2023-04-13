@@ -1,0 +1,14 @@
+.container {
+	height: 340px;
+	overflow-y: scroll;
+}
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #999;
+	border-radius: 5px;
+
+	padding: 10px;
+}

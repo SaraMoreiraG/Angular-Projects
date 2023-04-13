@@ -1,0 +1,15 @@
+<div class="row align-items-center m-0">
+	<div class="col-md-6 text-center">
+		<button class='btn btn-dark p-3' (click) = "changeColor()">{{ btnText }}</button>
+		<button *ngIf="count > 0" class='btn btn-light p-2 ms-1' (click) = "off()">Off</button>
+	</div>
+	<div class="col-md-6 text-center">
+		<div class='trafficTop bg-dark mx-auto'></div>
+		<div class='box bg-dark rounded-4 p-3'>
+			<div [class]=green></div>
+			<div [class]=orange></div>
+			<div [class]=red></div>
+		</div>
+	</div>
+</div>
+

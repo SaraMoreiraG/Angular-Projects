@@ -1,0 +1,26 @@
+<div id="container bg-danger" class="list mt-2">
+	<li class="input d-flex justify-content-center">
+		<input
+			[(ngModel)]="inputValue"
+			(keyup)="$event.code == 'Enter' ? newTask() : null"
+			placeholder="Add to do here"
+		/>
+	</li>
+	<div class="scroll">
+		<ul>
+			<li *ngFor="let item of taskList">
+				<task
+					[task]=item.label
+					[tasksList]="taskList"
+					(newItemEvent)="updateList($event)">
+				</task>
+			</li>
+		</ul>
+	</div>
+	<div class='footer'>
+		<small>{{ count }} items left</small>
+		<h2 (click)="deleteList()"><small class='erase-all'>Delete list </small>X</h2>
+	</div>
+	<div className='border1'></div>
+	<div className='border2'></div>
+</div>

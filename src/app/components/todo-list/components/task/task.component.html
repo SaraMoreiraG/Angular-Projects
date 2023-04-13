@@ -1,0 +1,45 @@
+<div class="main justify-content-between">
+	<div class="col-6">
+		<div *ngIf="editing; else start_empty">
+			<input
+				[(ngModel)]="editedTask"
+				(keyup)="$event.code == 'Enter' ? editTask() : null"
+				[placeholder]="taskName"
+				autofocus="autofocus"
+			/>
+		</div>
+		<ng-template #start_empty>
+			{{ (taskName.length > 20) ? (taskName | slice:0:17) + '...' : (taskName) }}
+		</ng-template>
+	</div>
+
+	<div class="col-6 justify-content-end">
+		<div class="d-flex">
+			<!-- OPEN INSIDE CONTAINER -->
+			<div class="icon col-4">
+				<small class='zoom ms-auto me-0' routerLink="/taskDetail/{{taskName}}">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</small>
+			</div>
+
+			<div class="icon col-4">
+					<small [class]='styleIcon' (click)="editingMode()">
+						<i class="fa-solid fa-pencil"></i>
+					</small>
+			</div>
+
+			<div class="icon col-4">
+				<small class='erase ms-2' (click)="deleteTask()">
+					<i class="fa-solid fa-trash"></i>
+				</small>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center" *ngIf="editing">
+			<div class="icon">
+				<small class='check' (click)="editTask()">
+					<i class="fa-solid fa-square-check"></i>
+				</small>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,89 @@
+.list {
+	background-color: #f9f9f9;
+	border: solid 1px #dfdfdf;
+	width: 300px;
+	height: 340px;
+	margin: auto;
+	color: #bfbfbf;
+}
+/****** User input ******/
+input{
+	border: 1px solid #f7f5f5;
+	margin: 0;
+	padding: 15px 10px 15px 10px;
+	scroll-snap-align: end;
+	font-weight: 200;
+	font-size: 1.5rem;
+	background-color: #f9f9f9;
+	width: 290px;
+	outline: none;
+	color: #bfbfbf;
+}
+input:hover {
+	background-color: #fff;
+}
+input:focus,
+input:active {
+	border-color: transparent;
+}
+
+/****** Scrolleable list ******/
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.scroll {
+	height: 230px;
+	overflow-y: scroll;
+}
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #999999;
+	border-radius: 5px;
+}
+
+/****** Card Footer ******/
+.footer {
+	padding:10px;
+	margin: 0;
+	display: flex;
+}
+.border1,
+.border2 {
+	height: 5px;
+	background-color: #f9f9f9;
+	margin: auto;
+	border: 1px solid #dfdfdf;
+	border-top: 0px;
+}
+.border1 {
+	width: 545px;
+}
+.border2{
+	width: 540px;
+}
+
+/****** Delete list ******/
+h2{
+	color: #eee4e5;
+	font-weight: 100;
+	font-size: 1rem;
+	margin: 0;
+	margin-left: auto;
+  }
+h2:hover{
+	color: rgb(160, 19, 19);
+	cursor: pointer;
+  }
+.erase-all{
+	color: rgb(160, 19, 19);
+	display: none;
+	font-weight: 100;
+}
+h2:hover .erase-all{
+	display: inline;
+}
