@@ -1,11 +1,6 @@
-# Angular Project with Bootstrap
+# Angular Project with Bootstrap <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png' alt='angular' width='40'>
 
 ![Project image](images/screenshot.png)
-
-<p align="center">
-<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png' alt='angular' width='40'>
-<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/800px-Bootstrap_logo.svg.png' alt='bootstrap' width='30'>
-</p>
 
 ## Description
 
